@@ -1,6 +1,12 @@
 
-<%= @course.name %>
+<h1><%= @course.name %></h1>
 <br />
-<%= @course.subject %>
+<h1>Subject: <%= @course.subject %></h1>
 <br />
-<%= @course.course_number %>
+<h1>Course Number: <%= @course.course_number %></h1>
+
+<%= form_tag @course, method: "DELETE" do %>
+
+<%= submit_tag "Delete Course" %>
+
+<% end %>
